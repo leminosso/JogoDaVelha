@@ -1,0 +1,185 @@
+/* customização corpo do jogo*/
+body{
+    background: linear-gradient(
+        90deg,
+        rgb(185, 65, 115) 0%,
+        rgb(162, 0, 255) 100%
+    );
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* customização do título*/
+.title{
+    font-family: 'Courier New', serif;
+    font-size: 40px;
+    text-align: center;
+    grid-area: a1;
+    justify-content: center;
+    color: white;
+    
+}
+
+.main{
+    text-align: center;
+    font-family: 'Courier New', serif;
+    font-size: 15px;
+    color: white;
+    display:grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "a1 a1 a1"
+                         "a3 a2 a7"
+                         "a5 a6 a6"
+                         ;
+    
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: #dfe0df;
+    border: 1px solid #a20c54;
+    display: inline-block;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.o{
+    position: relative;
+}
+
+.o:after{
+    position: absolute;
+    content: "\26AB";
+    font-size: 50px;
+    line-height: 100px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.x{
+    position: relative;
+}
+
+.x:after{
+    position: absolute;
+    content: "\274C";
+    font-size: 50px;
+    line-height: 100px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+
+#btnRestart {
+    width: 150px;
+    height: 50px;
+    margin: 20px;
+    color: white;
+    font-size: 16px;
+    background-color: #f20e9e;
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s;
+    grid-area: a5;
+    
+
+}
+
+#btnRestart:hover {
+    background-color: #ac5fd0;
+    cursor: pointer;
+}
+
+#btnRestartWins:hover {
+    background-color: #ac5fd0;
+    cursor: pointer;
+}
+
+#btnRestartWins{
+    width: 150px;
+    height: 50px;
+    margin: 20px;
+    color: white;
+    font-size: 16px;
+    background-color: #f20e9e;
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s;
+
+    grid-area: a6;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.player_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+#noughtIcon, #crossIcon {
+    height: 20px;  
+}
+  
+input {
+    margin: 20px;
+    width: 160px;
+    height: 20px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.container{
+    grid-area: a2;
+}
+
+.container-game{
+    grid-area: a3;
+}
+  
+
+
+.numberOfWins{
+    grid-area: a7;
+}
+
+@media(max-width:950px){
+    
+    .main{
+        text-align: center;
+        display:grid;
+        justify-items: center;
+        
+        grid-template-areas: "a1 a1 a1"
+                             "a2 a7 a7"
+                             "a3 a3 a3"
+                             "a5 a6 a6";
+
+    }
+}
+
+@media(max-width:460px){
+    #btnRestart {
+        width: 120px;
+        height: 50px;
+    }
+    
+    #btnRestartWins{
+        width: 120px;
+        height: 50px;
+    }
+}
